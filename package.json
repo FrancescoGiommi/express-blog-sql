@@ -15,6 +15,7 @@
   "author": "Francesco Giommi",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "mysql2": "^3.12.0"
   }
 }
