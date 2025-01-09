@@ -1,6 +1,3 @@
-/* Importo l'Array di posts */
-const postsData = require("../data/posts");
-
 /* Index */
 function index(req, res) {
   res.json(postsData);
