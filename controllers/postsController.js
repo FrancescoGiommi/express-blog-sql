@@ -17,6 +17,14 @@ function show(req, res) {
   /* Recupero l'id e lo trasformo in numero */
   const id = parseInt(req.params.id);
 
+  /* Preparo la query */
+  const sql = "SELECT * FROM posts WHERE id = ?";
+
+  /* Eseguo la query */
+  connection.query(sql, [id], (err, results) => {
+    if (err) return res.status(500).json({ error: "Database query failed" });
+    res.json(results[0]);
+  });
   // /* Cerco il post tramite l'id */
   // const posts = postsData.find((post) => post.id == id);
 
